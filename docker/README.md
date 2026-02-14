@@ -8,16 +8,16 @@ From the project root directory:
 
 ```bash
 # Build and start both services
-docker compose -f docker/compose.yml up -d
+docker compose up -d
 
 # View logs
-docker compose -f docker/compose.yml logs -f
+docker compose logs -f
 
 # Stop services
-docker compose -f docker/compose.yml down
+docker compose down
 
 # Stop and remove volumes (deletes database)
-docker compose -f docker/compose.yml down -v
+docker compose down -v
 ```
 
 The application will be available at:
@@ -48,7 +48,7 @@ Key variables:
 
 ### Ports
 
-Default ports (modify in `compose.yml` if needed):
+Default ports (modify in `../compose.yml` if needed):
 - Frontend: 3000 → 80 (nginx)
 - Backend: 3001 → 3001
 
@@ -74,8 +74,8 @@ For production:
 Example with custom API URL:
 
 ```bash
-docker compose -f docker/compose.yml build --build-arg VITE_API_URL=https://api.yourdomain.com
-docker compose -f docker/compose.yml up -d
+docker compose build --build-arg VITE_API_URL=https://api.yourdomain.com
+docker compose up -d
 ```
 
 ## Persistence
@@ -94,24 +94,24 @@ docker run --rm -v yahtzee-data:/data -v $(pwd):/backup alpine tar xzf /backup/y
 
 ### Check service health
 ```bash
-docker compose -f docker/compose.yml ps
+docker compose ps
 ```
 
 ### View logs
 ```bash
 # All services
-docker compose -f docker/compose.yml logs -f
+docker compose logs -f
 
 # Specific service
-docker compose -f docker/compose.yml logs -f backend
+docker compose logs -f backend
 ```
 
 ### Connect to backend container
 ```bash
-docker compose -f docker/compose.yml exec backend sh
+docker compose exec backend sh
 ```
 
 ### Rebuild after code changes
 ```bash
-docker compose -f docker/compose.yml up -d --build
+docker compose up -d --build
 ```
