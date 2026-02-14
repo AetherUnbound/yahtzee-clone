@@ -1856,7 +1856,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                       : '0 4px 6px rgba(0,0,0,0.1)',
                     transform: die.isHeld ? 'scale(1.1)' : 'scale(1)',
                     transition: 'all 0.3s ease',
-                    color: die.isHeld ? '#FFFFFF' : 'black',
+                    color: die.isHeld ? '#3B82F6' : 'black',
                     fontFamily: '"Georgia", "Times New Roman", serif',
                     position: 'relative',
                     animation: rollingDice.includes(index) ? 'roll 0.1s ease-in-out infinite' : 'none',
@@ -1876,7 +1876,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                     <div style={{
                       fontSize: '1.5rem',
                       fontWeight: 'bold',
-                      color: die.isHeld ? '#FFFFFF' : '#1f2937',
+                      color: die.isHeld ? '#3B82F6' : '#1f2937',
                       animation: rollingDice.includes(index) ? 'shake 0.1s ease-in-out infinite' : 'none'
                     }}>
                       {die.value}
