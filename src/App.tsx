@@ -811,7 +811,7 @@ Be sure to click your own link. Either of you can return to this message to resu
     return (
       <div style={{ 
         minHeight: '100vh', 
-        background: 'linear-gradient(to bottom, #5BCEFA, #F5A9B8)', 
+        background: 'linear-gradient(to bottom, #3B82F6, #F5A9B8)', 
         color: 'white', 
         padding: '1rem',
         fontFamily: '"Georgia", "Times New Roman", serif'
@@ -860,7 +860,7 @@ Be sure to click your own link. Either of you can return to this message to resu
               }}>
                 <span style={{
                   backgroundColor: 'rgba(245, 169, 184, 0.3)',
-                  color: '#92400e',
+                  color: '#FFFFFF',
                   padding: '0.25rem 0.5rem',
                   borderRadius: '0.25rem',
                   fontSize: '0.75rem',
@@ -1055,7 +1055,7 @@ Be sure to click your own link. Either of you can return to this message to resu
     return (
       <div style={{ 
         minHeight: '100vh', 
-        background: 'linear-gradient(to bottom, #5BCEFA, #F5A9B8)', 
+        background: 'linear-gradient(to bottom, #3B82F6, #F5A9B8)', 
         color: 'white', 
         padding: '0 0 2rem 0',
         fontFamily: '"Georgia", "Times New Roman", serif'
@@ -1104,7 +1104,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                 }}>
                   <span style={{
                     backgroundColor: 'rgba(245, 169, 184, 0.3)',
-                    color: '#92400e',
+                    color: '#FFFFFF',
                     padding: '0.25rem 0.5rem',
                     borderRadius: '0.25rem',
                     fontSize: '0.75rem',
@@ -1375,7 +1375,7 @@ Be sure to click your own link. Either of you can return to this message to resu
     return (
       <div style={{ 
         minHeight: '100vh', 
-        background: 'linear-gradient(to bottom, #5BCEFA, #F5A9B8)', 
+        background: 'linear-gradient(to bottom, #3B82F6, #F5A9B8)', 
         color: 'white', 
         padding: '1rem 1rem 2rem 1rem',
         fontFamily: '"Georgia", "Times New Roman", serif'
@@ -1633,7 +1633,7 @@ Be sure to click your own link. Either of you can return to this message to resu
   return (
     <div style={{ 
       minHeight: '100vh', 
-      background: 'linear-gradient(to bottom, #5BCEFA, #F5A9B8)', 
+      background: 'linear-gradient(to bottom, #3B82F6, #F5A9B8)', 
       color: 'white', 
       padding: '0 0 2rem 0',
       fontFamily: '"Georgia", "Times New Roman", serif'
@@ -1686,7 +1686,7 @@ Be sure to click your own link. Either of you can return to this message to resu
             }}>
               <span style={{
                 backgroundColor: 'rgba(245, 169, 184, 0.3)',
-                color: '#92400e',
+                color: '#FFFFFF',
                 padding: '0.25rem 0.5rem',
                 borderRadius: '0.25rem',
                 fontSize: '0.75rem',
@@ -1830,7 +1830,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                   style={{
                     width: '2.8rem',
                     height: '2.8rem',
-                    backgroundColor: die.isHeld ? '#E0F2FE' : 'white',
+                    backgroundColor: die.isHeld ? '#DBEAFE' : 'white',
                     borderRadius: '0.5rem',
                     display: 'flex',
                     alignItems: 'center',
@@ -1856,7 +1856,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                       : '0 4px 6px rgba(0,0,0,0.1)',
                     transform: die.isHeld ? 'scale(1.1)' : 'scale(1)',
                     transition: 'all 0.3s ease',
-                    color: die.isHeld ? '#92400e' : 'black',
+                    color: die.isHeld ? '#FFFFFF' : 'black',
                     fontFamily: '"Georgia", "Times New Roman", serif',
                     position: 'relative',
                     animation: rollingDice.includes(index) ? 'roll 0.1s ease-in-out infinite' : 'none',
@@ -1876,7 +1876,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                     <div style={{
                       fontSize: '1.5rem',
                       fontWeight: 'bold',
-                      color: die.isHeld ? '#92400e' : '#1f2937',
+                      color: die.isHeld ? '#FFFFFF' : '#1f2937',
                       animation: rollingDice.includes(index) ? 'shake 0.1s ease-in-out infinite' : 'none'
                     }}>
                       {die.value}
@@ -2087,7 +2087,7 @@ Be sure to click your own link. Either of you can return to this message to resu
               
               return (
                               <div key={displayPlayer.id} style={{ 
-                  backgroundColor: '#E0F2FE', 
+                  backgroundColor: '#DBEAFE', 
                   color: '#1f2937', 
                   padding: '1.25rem', 
                   borderRadius: '0.75rem', 
@@ -2106,7 +2106,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                     <h3 style={{ 
                       fontSize: 'clamp(1.25rem, 3vw, 1.5rem)', 
                       fontWeight: 'bold', 
-                      color: '#92400e',
+                      color: '#FFFFFF',
                       fontFamily: '"Georgia", "Times New Roman", serif'
                     }}>
                       {isActivePlayer ? '🎯 ' : ''}{displayPlayer.name}
@@ -2114,7 +2114,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                     <div style={{ 
                       fontSize: '1.25rem', 
                       fontWeight: 'bold', 
-                      color: '#059669',
+                      color: '#FFFFFF',
                       fontFamily: '"Georgia", "Times New Roman", serif'
                     }}>
                       Total: {getTotalScore(displayPlayer)}
@@ -2133,7 +2133,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                       fontSize: 'clamp(0.875rem, 2.5vw, 1rem)', 
                       fontWeight: 'bold', 
                       marginBottom: '0.375rem', 
-                      color: '#92400e',
+                      color: '#FFFFFF',
                       fontFamily: '"Georgia", "Times New Roman", serif'
                     }}>
                       Upper Section
@@ -2152,8 +2152,8 @@ Be sure to click your own link. Either of you can return to this message to resu
                            {isActivePlayer && !isCategoryUsed(displayPlayer, category) && getPotentialScoreForCategory(category) !== null && (
                              <span style={{ 
                                fontSize: '0.75rem', 
-                               color: '#d97706', 
-                               backgroundColor: '#E0F2FE', 
+                               color: '#F5A9B8', 
+                               backgroundColor: '#DBEAFE', 
                                padding: '0.125rem 0.25rem', 
                                borderRadius: '0.125rem',
                                fontFamily: '"Georgia", "Times New Roman", serif'
@@ -2227,7 +2227,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                                   
                                   // Priority 1: Upper Section if available
                                   if (isCategoryAvailable(displayPlayer, upperCategory)) {
-                                    return category === upperCategory ? '#F5A9B8' : '#d97706';
+                                    return category === upperCategory ? '#F5A9B8' : '#F5A9B8';
                                   }
                                   
                                   // Priority 2: Lower Section categories only if Upper Section is filled
@@ -2260,7 +2260,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                                     }
                                   }
                                 }
-                                return '#d97706';
+                                return '#F5A9B8';
                               })(),
                               color: isCategoryUsed(player, category) || playerIndex !== gameState.currentPlayerIndex || gameState.rollsLeft === 3 ? '#6b7280' : 'white',
                               fontSize: '0.75rem',
@@ -2284,7 +2284,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                         <span>Upper Total</span>
                         <span>{getUpperTotal(displayPlayer)}</span>
                       </div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', color: '#d97706' }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', color: '#F5A9B8' }}>
                         <span>Bonus (63+)</span>
                         <span>{getUpperBonus(displayPlayer)}</span>
                       </div>
@@ -2297,7 +2297,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                       fontSize: 'clamp(0.875rem, 2.5vw, 1rem)', 
                       fontWeight: 'bold', 
                       marginBottom: '0.375rem', 
-                      color: '#92400e',
+                      color: '#FFFFFF',
                       fontFamily: '"Georgia", "Times New Roman", serif'
                     }}>
                       Lower Section
@@ -2324,8 +2324,8 @@ Be sure to click your own link. Either of you can return to this message to resu
                            {isActivePlayer && !isCategoryUsed(displayPlayer, key) && getPotentialScoreForCategory(key) !== null && (
                              <span style={{ 
                                fontSize: '0.75rem', 
-                               color: '#d97706', 
-                               backgroundColor: '#E0F2FE', 
+                               color: '#F5A9B8', 
+                               backgroundColor: '#DBEAFE', 
                                padding: '0.125rem 0.25rem', 
                                borderRadius: '0.125rem',
                                fontFamily: '"Georgia", "Times New Roman", serif'
@@ -2399,7 +2399,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                                   
                                   // Priority 1: Upper Section if available
                                   if (isCategoryAvailable(displayPlayer, upperCategory)) {
-                                    return key === upperCategory ? '#059669' : '#d97706';
+                                    return key === upperCategory ? '#F5A9B8' : '#F5A9B8';
                                   }
                                   
                                   // Priority 2: Lower Section categories only if Upper Section is filled
@@ -2432,7 +2432,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                                     }
                                   }
                                 }
-                                return '#d97706';
+                                return '#F5A9B8';
                               })(),
                               color: isCategoryUsed(player, key) || playerIndex !== gameState.currentPlayerIndex || gameState.rollsLeft === 3 ? '#6b7280' : 'white',
                               fontSize: '0.75rem',
@@ -2471,7 +2471,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                        gridColumn: '1 / -1',
                        marginTop: '1rem',
                        padding: '0.75rem',
-                       backgroundColor: '#E0F2FE',
+                       backgroundColor: '#DBEAFE',
                        borderRadius: '0.5rem',
                        border: '2px solid #F5A9B8',
                        wordWrap: 'break-word'
@@ -2487,7 +2487,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                          <h4 style={{ 
                            fontSize: '1rem', 
                            fontWeight: 'bold', 
-                           color: '#92400e',
+                           color: '#FFFFFF',
                            fontFamily: '"Georgia", "Times New Roman", serif'
                          }}>
                            🎲 Yahtzee Joker Rules Apply
@@ -2509,7 +2509,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                        </div>
                                                 <div style={{ 
                            fontSize: '0.75rem', 
-                           color: '#92400e', 
+                           color: '#FFFFFF', 
                            fontStyle: 'italic',
                            fontFamily: '"Georgia", "Times New Roman", serif'
                          }}>
