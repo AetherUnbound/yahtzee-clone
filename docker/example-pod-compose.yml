@@ -1,14 +1,9 @@
 services:
   backend:
-    build:
-      context: .
-      dockerfile: docker/Dockerfile.backend
+    image: ghcr.io/aetherunbound/yahtzee-clone-backend:latest
     container_name: yahtzee-backend
-    ports:
-      - "3001:3001"
     environment:
       - NODE_ENV=production
-      - PORT=3001
       - DB_PATH=/app/data/yahtzee_remote.db
       - MAX_PLAYERS=6
       - GAME_CLEANUP_INTERVAL=86400000
@@ -18,14 +13,8 @@ services:
     restart: unless-stopped
 
   frontend:
-    build:
-      context: .
-      dockerfile: docker/Dockerfile.frontend
-      args:
-        - VITE_API_URL=http://localhost:3001
+    image: ghcr.io/aetherunbound/yahtzee-clone-frontend:latest
     container_name: yahtzee-frontend
     ports:
       - "3000:80"
-    depends_on:
-      - backend
     restart: unless-stopped
