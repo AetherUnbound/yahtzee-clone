@@ -4,8 +4,8 @@ import type { GameState, Die, ScoringCategory, Player } from './types'
 import { LocalGameEngine } from './game/LocalGameEngine'
 import { getPotentialScore, getUpperTotal, getUpperBonus, getLowerTotal, getTotalScore, isCategoryUsed } from './game/gameLogic'
 
-// API Configuration
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+// API Configuration - Check window.ENV first (set by docker), then fall back to build-time env
+const API_BASE_URL = (window as any).ENV?.VITE_API_URL || import.meta.env.VITE_API_URL || 'http://localhost:3001';
 
 function App() {
   const [gameEngine] = useState(() => new LocalGameEngine());

@@ -17,4 +17,6 @@ services:
     container_name: yahtzee-frontend
     ports:
       - "3000:80"
+    environment:
+      - VITE_API_URL=http://backend:3001
     restart: unless-stopped
