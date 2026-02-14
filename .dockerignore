@@ -1,0 +1,59 @@
+# Dependencies
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Development files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Build artifacts
+dist
+build
+coverage
+
+# Git
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+server.log
+
+# Testing
+test-database.mjs
+
+# Deployment
+deployment/
+
+# Docker
+docker/
+Dockerfile*
+docker-compose*.yml
+compose*.yml
+
+# Misc
+*.md
+!README.md
+.prettierrc
+.eslintrc*
+tsconfig*.json
