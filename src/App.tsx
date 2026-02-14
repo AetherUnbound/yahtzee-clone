@@ -860,7 +860,7 @@ Be sure to click your own link. Either of you can return to this message to resu
               }}>
                 <span style={{
                   backgroundColor: 'rgba(245, 169, 184, 0.3)',
-                  color: '#FFFFFF',
+                  color: '#3B82F6',
                   padding: '0.25rem 0.5rem',
                   borderRadius: '0.25rem',
                   fontSize: '0.75rem',
@@ -1104,7 +1104,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                 }}>
                   <span style={{
                     backgroundColor: 'rgba(245, 169, 184, 0.3)',
-                    color: '#FFFFFF',
+                    color: '#3B82F6',
                     padding: '0.25rem 0.5rem',
                     borderRadius: '0.25rem',
                     fontSize: '0.75rem',
@@ -1686,7 +1686,7 @@ Be sure to click your own link. Either of you can return to this message to resu
             }}>
               <span style={{
                 backgroundColor: 'rgba(245, 169, 184, 0.3)',
-                color: '#FFFFFF',
+                color: '#3B82F6',
                 padding: '0.25rem 0.5rem',
                 borderRadius: '0.25rem',
                 fontSize: '0.75rem',
@@ -2106,7 +2106,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                     <h3 style={{ 
                       fontSize: 'clamp(1.25rem, 3vw, 1.5rem)', 
                       fontWeight: 'bold', 
-                      color: '#FFFFFF',
+                      color: '#3B82F6',
                       fontFamily: '"Georgia", "Times New Roman", serif'
                     }}>
                       {isActivePlayer ? '🎯 ' : ''}{displayPlayer.name}
@@ -2114,7 +2114,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                     <div style={{ 
                       fontSize: '1.25rem', 
                       fontWeight: 'bold', 
-                      color: '#FFFFFF',
+                      color: '#3B82F6',
                       fontFamily: '"Georgia", "Times New Roman", serif'
                     }}>
                       Total: {getTotalScore(displayPlayer)}
@@ -2133,7 +2133,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                       fontSize: 'clamp(0.875rem, 2.5vw, 1rem)', 
                       fontWeight: 'bold', 
                       marginBottom: '0.375rem', 
-                      color: '#FFFFFF',
+                      color: '#3B82F6',
                       fontFamily: '"Georgia", "Times New Roman", serif'
                     }}>
                       Upper Section
@@ -2297,7 +2297,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                       fontSize: 'clamp(0.875rem, 2.5vw, 1rem)', 
                       fontWeight: 'bold', 
                       marginBottom: '0.375rem', 
-                      color: '#FFFFFF',
+                      color: '#3B82F6',
                       fontFamily: '"Georgia", "Times New Roman", serif'
                     }}>
                       Lower Section
@@ -2487,7 +2487,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                          <h4 style={{ 
                            fontSize: '1rem', 
                            fontWeight: 'bold', 
-                           color: '#FFFFFF',
+                           color: '#3B82F6',
                            fontFamily: '"Georgia", "Times New Roman", serif'
                          }}>
                            🎲 Yahtzee Joker Rules Apply
@@ -2509,7 +2509,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                        </div>
                                                 <div style={{ 
                            fontSize: '0.75rem', 
-                           color: '#FFFFFF', 
+                           color: '#3B82F6', 
                            fontStyle: 'italic',
                            fontFamily: '"Georgia", "Times New Roman", serif'
                          }}>
