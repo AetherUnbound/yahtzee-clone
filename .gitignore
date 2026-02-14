@@ -19,6 +19,7 @@ build/
 *.db
 *.sqlite
 *.sqlite3
+server/yahtzee_remote.db
 data/
 
 # Log files
