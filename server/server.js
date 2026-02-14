@@ -54,38 +54,6 @@ app.use((req, res, next) => {
   next();
 });
 
-// Basic rate limiting (simple in-memory store)
-const requestCounts = new Map();
-const RATE_LIMIT_WINDOW = 60000; // 1 minute
-const MAX_REQUESTS_PER_WINDOW = 100; // 100 requests per minute per IP
-
-// Rate limiting middleware
-app.use((req, res, next) => {
-  const clientIP = req.ip || req.connection.remoteAddress || 'unknown';
-  const now = Date.now();
-  
-  if (!requestCounts.has(clientIP)) {
-    requestCounts.set(clientIP, { count: 1, resetTime: now + RATE_LIMIT_WINDOW });
-  } else {
-    const clientData = requestCounts.get(clientIP);
-    if (now > clientData.resetTime) {
-      clientData.count = 1;
-      clientData.resetTime = now + RATE_LIMIT_WINDOW;
-    } else {
-      clientData.count++;
-    }
-    
-    if (clientData.count > MAX_REQUESTS_PER_WINDOW) {
-      return res.status(429).json({ 
-        error: 'Too many requests', 
-        message: 'Rate limit exceeded. Please try again later.' 
-      });
-    }
-  }
-  
-  next();
-});
-
 // Initialize database manager
 const dbManager = new DatabaseManager(config.dbPath);
 
