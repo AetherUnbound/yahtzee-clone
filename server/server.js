@@ -11,10 +11,7 @@ const PORT = process.env.PORT || 3001;
 app.disable('x-powered-by');
 
 // Middleware
-app.use(cors({
-  origin: config.corsOrigins,
-  credentials: true
-}));
+app.use(cors()); // Allow all origins
 app.use(express.json({ limit: '1mb' })); // Limit request body size
 
 // Security headers middleware
