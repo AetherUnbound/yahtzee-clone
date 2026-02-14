@@ -157,313 +157,7 @@ function App() {
     </div>
   );
 
-  // Tip component for all screens
-  const TipComponent = () => {
-    const [showCustomModal, setShowCustomModal] = useState(false);
-    const [customAmount, setCustomAmount] = useState('');
-    const [customAmountError, setCustomAmountError] = useState('');
 
-    const handleCustomTip = () => {
-      const amount = parseFloat(customAmount);
-      if (isNaN(amount) || amount <= 0) {
-        setCustomAmountError('Please enter a valid amount greater than 0');
-        return;
-      }
-      
-             // Open Venmo with custom amount
-       window.open(`https://venmo.com/Thor-Odhner?txn=pay&note=Yahtzee%20Tip%20$${amount}&amount=${amount}`, '_blank');
-      
-      // Reset and close modal
-      setCustomAmount('');
-      setCustomAmountError('');
-      setShowCustomModal(false);
-    };
-
-    const openCustomModal = () => {
-      setShowCustomModal(true);
-      setCustomAmount('');
-      setCustomAmountError('');
-    };
-
-    return (
-      <>
-        <div style={{
-          marginTop: '3rem',
-          padding: '2rem',
-          backgroundColor: 'rgba(255,255,255,0.05)',
-          borderRadius: '0.75rem',
-          border: '1px solid rgba(255,255,255,0.1)',
-          textAlign: 'center',
-          maxWidth: '600px',
-          margin: '3rem auto 0'
-        }}>
-          <h3 style={{
-            fontSize: '1.25rem',
-            fontWeight: 'bold',
-            marginBottom: '1rem',
-            color: '#fbbf24',
-            fontFamily: '"Georgia", "Times New Roman", serif'
-          }}>
-            💝 Leave a Tip
-          </h3>
-          <p style={{
-            fontSize: '0.9rem',
-            color: '#e5e7eb',
-            marginBottom: '1.5rem',
-            lineHeight: '1.5',
-            fontFamily: '"Georgia", "Times New Roman", serif'
-          }}>
-            This project is free, ad-free, open source, and privacy conscious. 
-            Consider an optional tip to help cover dev and hosting costs. 
-            Any amount is appreciated!
-          </p>
-          
-          <div style={{
-            display: 'flex',
-            gap: '0.75rem',
-            justifyContent: 'center',
-            flexWrap: 'wrap',
-            marginBottom: '1rem'
-          }}>
-            {[2, 5, 10].map(amount => (
-              <button
-                key={amount}
-                onClick={() => window.open(`https://venmo.com/Thor-Odhner?txn=pay&note=Yahtzee%20Tip%20$${amount}&amount=${amount}`, '_blank')}
-                style={{
-                  backgroundColor: '#fbbf24',
-                  color: '#1f2937',
-                  padding: '0.375rem 0.75rem',
-                  borderRadius: '0.5rem',
-                  fontWeight: '600',
-                  fontSize: '1rem',
-                  border: 'none',
-                  cursor: 'pointer',
-                  boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-                  fontFamily: '"Georgia", "Times New Roman", serif',
-                  transition: 'all 0.2s ease'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-2px)';
-                  e.currentTarget.style.boxShadow = '0 6px 12px rgba(0,0,0,0.15)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
-                }}
-              >
-                ${amount}
-              </button>
-            ))}
-            <button
-              onClick={openCustomModal}
-              style={{
-                backgroundColor: '#6b7280',
-                color: 'white',
-                padding: '0.375rem 0.75rem',
-                borderRadius: '0.5rem',
-                fontWeight: '600',
-                fontSize: '1rem',
-                border: 'none',
-                cursor: 'pointer',
-                boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-                fontFamily: '"Georgia", "Times New Roman", serif',
-                transition: 'all 0.2s ease'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-2px)';
-                e.currentTarget.style.boxShadow = '0 6px 12px rgba(0,0,0,0.15)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
-              }}
-            >
-              Other
-            </button>
-          </div>
-          
-          <div style={{
-            fontSize: '0.75rem',
-            color: '#9ca3af',
-            fontStyle: 'italic',
-            fontFamily: '"Georgia", "Times New Roman", serif'
-          }}>
-            💳 Venmo: @Thor-Odhner
-          </div>
-        </div>
-
-        {/* Custom Amount Modal */}
-        {showCustomModal && (
-          <div style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: 'rgba(0,0,0,0.7)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            zIndex: 1000,
-            padding: '1rem'
-          }}>
-            <div style={{
-              backgroundColor: '#14532d',
-              padding: '2rem',
-              borderRadius: '0.75rem',
-              border: '2px solid #fbbf24',
-              maxWidth: '400px',
-              width: '100%',
-              boxShadow: '0 25px 50px rgba(0,0,0,0.5)',
-              fontFamily: '"Georgia", "Times New Roman", serif'
-            }}>
-              <h3 style={{
-                fontSize: '1.5rem',
-                fontWeight: 'bold',
-                marginBottom: '1.5rem',
-                textAlign: 'center',
-                color: '#fbbf24',
-                fontFamily: '"Georgia", "Times New Roman", serif'
-              }}>
-                💝 Custom Tip Amount
-              </h3>
-              
-              <div style={{ marginBottom: '1.5rem' }}>
-                <label style={{
-                  display: 'block',
-                  fontWeight: '500',
-                  marginBottom: '0.5rem',
-                  fontSize: '1rem',
-                  color: 'white',
-                  fontFamily: '"Georgia", "Times New Roman", serif'
-                }}>
-                  Enter tip amount:
-                </label>
-                <div style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '0.5rem'
-                }}>
-                  <span style={{
-                    fontSize: '1.25rem',
-                    fontWeight: 'bold',
-                    color: '#fbbf24',
-                    fontFamily: '"Georgia", "Times New Roman", serif'
-                  }}>
-                    $
-                  </span>
-                  <input
-                    id="custom-tip-amount"
-                    name="custom-tip-amount"
-                    type="number"
-                    value={customAmount}
-                    onChange={(e) => {
-                      setCustomAmount(e.target.value);
-                      if (customAmountError) setCustomAmountError('');
-                    }}
-                    onKeyPress={(e) => {
-                      if (e.key === 'Enter') {
-                        handleCustomTip();
-                      }
-                    }}
-                    style={{
-                      flex: 1,
-                      padding: '0.75rem',
-                      borderRadius: '0.5rem',
-                      border: customAmountError ? '2px solid #ef4444' : '2px solid #fbbf24',
-                      fontSize: '1.125rem',
-                      fontFamily: '"Georgia", "Times New Roman", serif',
-                      backgroundColor: 'white',
-                      color: '#1f2937',
-                      outline: 'none'
-                    }}
-                    placeholder="0.00"
-                    min="0.01"
-                    step="0.01"
-                    autoFocus
-                  />
-                </div>
-                {customAmountError && (
-                  <p style={{
-                    color: '#ef4444',
-                    fontSize: '0.875rem',
-                    marginTop: '0.5rem',
-                    margin: 0,
-                    fontFamily: '"Georgia", "Times New Roman", serif'
-                  }}>
-                    {customAmountError}
-                  </p>
-                )}
-              </div>
-
-              <div style={{
-                display: 'flex',
-                gap: '1rem',
-                justifyContent: 'center'
-              }}>
-                <button
-                  onClick={() => {
-                    setShowCustomModal(false);
-                    setCustomAmount('');
-                    setCustomAmountError('');
-                  }}
-                  style={{
-                    backgroundColor: '#6b7280',
-                    color: 'white',
-                    padding: '0.375rem 0.75rem',
-                    borderRadius: '0.5rem',
-                    fontWeight: '600',
-                    fontSize: '1rem',
-                    border: 'none',
-                    cursor: 'pointer',
-                    boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-                    fontFamily: '"Georgia", "Times New Roman", serif',
-                    transition: 'all 0.2s ease'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'translateY(-2px)';
-                    e.currentTarget.style.boxShadow = '0 6px 12px rgba(0,0,0,0.15)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
-                  }}
-                >
-                  Cancel
-                </button>
-                <button
-                  onClick={handleCustomTip}
-                  style={{
-                    backgroundColor: '#fbbf24',
-                    color: '#1f2937',
-                    padding: '0.375rem 0.75rem',
-                    borderRadius: '0.5rem',
-                    fontWeight: '600',
-                    fontSize: '1rem',
-                    border: 'none',
-                    cursor: 'pointer',
-                    boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-                    fontFamily: '"Georgia", "Times New Roman", serif',
-                    transition: 'all 0.2s ease'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'translateY(-2px)';
-                    e.currentTarget.style.boxShadow = '0 6px 12px rgba(0,0,0,0.15)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
-                  }}
-                >
-                  Send Tip
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
-      </>
-    );
-  };
 
   // Join a remote game (for invited friend)
   const joinRemoteGame = async (friendName: string) => {
@@ -1120,7 +814,7 @@ Be sure to click your own link. Either of you can return to this message to resu
         minWidth: '350px',
         background: 'linear-gradient(to bottom, #15803d, #14532d)', 
         color: 'white', 
-        padding: '2rem',
+        padding: '2rem 2rem 2rem 2rem',
         fontFamily: '"Georgia", "Times New Roman", serif'
       }}>
         <div style={{ maxWidth: '600px', margin: '0 auto' }}>
@@ -1349,9 +1043,6 @@ Be sure to click your own link. Either of you can return to this message to resu
               </div>
             )}
           </div>
-          
-          {/* Tip Component */}
-          <TipComponent />
         </div>
         
         {/* Notification System */}
@@ -1368,7 +1059,7 @@ Be sure to click your own link. Either of you can return to this message to resu
         minWidth: '400px',
         background: 'linear-gradient(to bottom, #15803d, #14532d)', 
         color: 'white', 
-        padding: '0',
+        padding: '0 0 2rem 0',
         fontFamily: '"Georgia", "Times New Roman", serif'
       }}>
         <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0' }}>
@@ -1670,9 +1361,6 @@ Be sure to click your own link. Either of you can return to this message to resu
 
 
           </div>
-          
-          {/* Tip Component */}
-          <TipComponent />
         </div>
         
         {/* Notification System */}
@@ -1692,7 +1380,7 @@ Be sure to click your own link. Either of you can return to this message to resu
         minWidth: '350px',
         background: 'linear-gradient(to bottom, #15803d, #14532d)', 
         color: 'white', 
-        padding: '1.5rem',
+        padding: '1.5rem 1.5rem 2rem 1.5rem',
         fontFamily: '"Georgia", "Times New Roman", serif'
       }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
@@ -1933,9 +1621,6 @@ Be sure to click your own link. Either of you can return to this message to resu
               </button>
             </div>
           </div>
-          
-          {/* Tip Component */}
-          <TipComponent />
         </div>
         
         {/* Notification System */}
@@ -1954,7 +1639,7 @@ Be sure to click your own link. Either of you can return to this message to resu
       minWidth: '400px',
       background: 'linear-gradient(to bottom, #15803d, #14532d)', 
       color: 'white', 
-      padding: '0',
+      padding: '0 0 2rem 0',
       fontFamily: '"Georgia", "Times New Roman", serif'
     }}>
       <div style={{ 
@@ -2866,9 +2551,6 @@ Be sure to click your own link. Either of you can return to this message to resu
            })}
            </div>
          </div>
-         
-                   {/* Tip Component */}
-          <TipComponent />
         </div>
         
         {/* Notification System */}
