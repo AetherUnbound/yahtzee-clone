@@ -11,8 +11,10 @@ COPY server/package*.json ./
 # Install production dependencies only
 RUN npm ci --omit=dev
 
-# Copy server source code
-COPY server/ ./
+# Copy server source code (node_modules already installed above)
+COPY server/*.js ./
+COPY server/database ./database
+COPY server/game ./game
 
 # Create directory for database with proper permissions
 RUN mkdir -p /app/data && chown -R node:node /app
