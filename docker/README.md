@@ -80,14 +80,14 @@ docker compose up -d
 
 ## Persistence
 
-Game data is stored in the `yahtzee-data` volume. To backup:
+Game data is stored in the `./data` directory. To backup:
 
 ```bash
 # Create backup
-docker run --rm -v yahtzee-data:/data -v $(pwd):/backup alpine tar czf /backup/yahtzee-backup.tar.gz -C /data .
+tar czf yahtzee-backup.tar.gz data/
 
 # Restore backup
-docker run --rm -v yahtzee-data:/data -v $(pwd):/backup alpine tar xzf /backup/yahtzee-backup.tar.gz -C /data
+tar xzf yahtzee-backup.tar.gz
 ```
 
 ## Troubleshooting
