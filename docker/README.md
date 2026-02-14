@@ -64,6 +64,29 @@ docker build -f docker/Dockerfile.backend -t yahtzee-backend .
 
 ## Production Deployment
 
+### Using Pre-built Images from GitHub Container Registry
+
+The project automatically publishes Docker images to GitHub Container Registry (ghcr.io) on every push to the main branch.
+
+To use the pre-built images:
+
+```bash
+# Pull the latest images
+docker pull ghcr.io/aetherunbound/yahtzee-clone-frontend:latest
+docker pull ghcr.io/aetherunbound/yahtzee-clone-backend:latest
+
+# Or use them directly in your docker-compose.yml by replacing the build context with:
+# image: ghcr.io/aetherunbound/yahtzee-clone-frontend:latest
+# image: ghcr.io/aetherunbound/yahtzee-clone-backend:latest
+```
+
+The images are tagged with:
+- `latest` - Latest version from main branch
+- `main-<sha>` - Specific commit from main branch
+- `main` - Latest from main branch
+
+### Manual Deployment
+
 For production:
 
 1. Update `VITE_API_URL` to your production backend URL
