@@ -1,0 +1,29 @@
+# Dependencies
+node_modules
+
+# Build artifacts
+dist
+dist-ssr
+coverage
+
+# Git
+.git
+
+# IDE
+.vscode
+.idea
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Database files (will be created in container)
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+
+# Deployment artifacts
+deployment/
