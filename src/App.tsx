@@ -811,7 +811,7 @@ Be sure to click your own link. Either of you can return to this message to resu
     return (
       <div style={{ 
         minHeight: '100vh', 
-        background: 'linear-gradient(to bottom, #15803d, #14532d)', 
+        background: 'linear-gradient(to bottom, #5BCEFA, #F5A9B8)', 
         color: 'white', 
         padding: '1rem',
         fontFamily: '"Georgia", "Times New Roman", serif'
@@ -822,7 +822,7 @@ Be sure to click your own link. Either of you can return to this message to resu
             fontWeight: 'bold', 
             textAlign: 'center', 
             marginBottom: '2rem', 
-            color: '#fbbf24',
+            color: '#F5A9B8',
             textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
             fontFamily: '"Georgia", "Times New Roman", serif'
                       }}>
@@ -835,22 +835,22 @@ Be sure to click your own link. Either of you can return to this message to resu
               width: '100%',
               marginBottom: '2rem',
               padding: '1.25rem',
-              backgroundColor: 'rgba(251, 191, 36, 0.15)',
+              backgroundColor: 'rgba(245, 169, 184, 0.15)',
               borderRadius: '0.75rem',
-              border: '2px solid rgba(251, 191, 36, 0.4)',
+              border: '2px solid rgba(245, 169, 184, 0.4)',
               display: 'flex',
               justifyContent: 'space-between',
               alignItems: 'center',
               flexWrap: 'wrap',
               gap: '0.75rem',
-              boxShadow: '0 4px 12px rgba(251, 191, 36, 0.2)',
+              boxShadow: '0 4px 12px rgba(245, 169, 184, 0.2)',
               animation: 'fadeIn 0.5s ease-in-out',
               position: 'relative'
             }}>
               <div style={{
                 flex: 1,
                 fontSize: '1rem',
-                color: '#fbbf24',
+                color: '#F5A9B8',
                 fontWeight: '600',
                 fontFamily: '"Georgia", "Times New Roman", serif',
                 lineHeight: '1.4',
@@ -859,7 +859,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                 gap: '0.5rem'
               }}>
                 <span style={{
-                  backgroundColor: 'rgba(251, 191, 36, 0.3)',
+                  backgroundColor: 'rgba(245, 169, 184, 0.3)',
                   color: '#92400e',
                   padding: '0.25rem 0.5rem',
                   borderRadius: '0.25rem',
@@ -874,9 +874,9 @@ Be sure to click your own link. Either of you can return to this message to resu
                               <button
                   onClick={() => setPreviousGameResult(null)}
                   style={{
-                    backgroundColor: 'rgba(251, 191, 36, 0.2)',
-                    color: '#fbbf24',
-                    border: '1px solid #fbbf24',
+                    backgroundColor: 'rgba(245, 169, 184, 0.2)',
+                    color: '#F5A9B8',
+                    border: '1px solid #F5A9B8',
                     borderRadius: '50%',
                     width: '32px',
                     height: '32px',
@@ -890,11 +890,11 @@ Be sure to click your own link. Either of you can return to this message to resu
                     transition: 'all 0.2s ease'
                   }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(251, 191, 36, 0.3)';
+                  e.currentTarget.style.backgroundColor = 'rgba(245, 169, 184, 0.3)';
                   e.currentTarget.style.transform = 'scale(1.1)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(251, 191, 36, 0.2)';
+                  e.currentTarget.style.backgroundColor = 'rgba(245, 169, 184, 0.2)';
                   e.currentTarget.style.transform = 'scale(1)';
                 }}
                 title="Dismiss notification"
@@ -935,7 +935,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                    fontSize: '1.5rem', 
                    fontWeight: 'bold', 
                    marginBottom: '1rem',
-                   color: '#fbbf24'
+                   color: '#F5A9B8'
                  }}>
                    Waiting for your friend to join...
                  </h2>
@@ -945,9 +945,9 @@ Be sure to click your own link. Either of you can return to this message to resu
                                    <div style={{ 
                     marginTop: '1rem', 
                     padding: '1rem', 
-                    backgroundColor: 'rgba(251, 191, 36, 0.1)', 
+                    backgroundColor: 'rgba(245, 169, 184, 0.1)', 
                     borderRadius: '0.5rem',
-                    border: '1px solid rgba(251, 191, 36, 0.3)',
+                    border: '1px solid rgba(245, 169, 184, 0.3)',
                     marginBottom: '1rem'
                   }}>
                     <p style={{ margin: 0, fontSize: '0.9rem', fontWeight: '600' }}>
@@ -965,7 +965,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                   fontWeight: 'bold', 
                   marginBottom: '1rem',
                   textAlign: 'center',
-                  color: '#fbbf24'
+                  color: '#F5A9B8'
                 }}>
                   Join the Game
                 </h2>
@@ -1022,7 +1022,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                   <button
                     onClick={() => joinRemoteGame(playerNames[0])}
                     style={{ 
-                      backgroundColor: '#fbbf24',
+                      backgroundColor: '#F5A9B8',
                       padding: '0.5rem 1rem',
                       borderRadius: '0.5rem',
                       fontWeight: '600',
@@ -1055,7 +1055,7 @@ Be sure to click your own link. Either of you can return to this message to resu
     return (
       <div style={{ 
         minHeight: '100vh', 
-        background: 'linear-gradient(to bottom, #15803d, #14532d)', 
+        background: 'linear-gradient(to bottom, #5BCEFA, #F5A9B8)', 
         color: 'white', 
         padding: '0 0 2rem 0',
         fontFamily: '"Georgia", "Times New Roman", serif'
@@ -1066,7 +1066,7 @@ Be sure to click your own link. Either of you can return to this message to resu
             fontWeight: 'bold', 
             textAlign: 'center', 
             marginBottom: '1rem', 
-            color: '#fbbf24',
+            color: '#F5A9B8',
             textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
             fontFamily: '"Georgia", "Times New Roman", serif'
                       }}>
@@ -1079,22 +1079,22 @@ Be sure to click your own link. Either of you can return to this message to resu
                 width: '100%',
                 marginBottom: '1rem',
                 padding: '1.25rem',
-                backgroundColor: 'rgba(251, 191, 36, 0.15)',
+                backgroundColor: 'rgba(245, 169, 184, 0.15)',
                 borderRadius: '0.75rem',
-                border: '2px solid rgba(251, 191, 36, 0.4)',
+                border: '2px solid rgba(245, 169, 184, 0.4)',
                 display: 'flex',
                 justifyContent: 'space-between',
                 alignItems: 'center',
                 flexWrap: 'wrap',
                 gap: '0.75rem',
-                boxShadow: '0 4px 12px rgba(251, 191, 36, 0.2)',
+                boxShadow: '0 4px 12px rgba(245, 169, 184, 0.2)',
                 animation: 'fadeIn 0.5s ease-in-out',
                 position: 'relative'
               }}>
                 <div style={{
                   flex: 1,
                   fontSize: '1rem',
-                  color: '#fbbf24',
+                  color: '#F5A9B8',
                   fontWeight: '600',
                   fontFamily: '"Georgia", "Times New Roman", serif',
                   lineHeight: '1.4',
@@ -1103,7 +1103,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                   gap: '0.5rem'
                 }}>
                   <span style={{
-                    backgroundColor: 'rgba(251, 191, 36, 0.3)',
+                    backgroundColor: 'rgba(245, 169, 184, 0.3)',
                     color: '#92400e',
                     padding: '0.25rem 0.5rem',
                     borderRadius: '0.25rem',
@@ -1118,9 +1118,9 @@ Be sure to click your own link. Either of you can return to this message to resu
                 <button
                   onClick={() => setPreviousGameResult(null)}
                   style={{
-                    backgroundColor: 'rgba(251, 191, 36, 0.2)',
-                    color: '#fbbf24',
-                    border: '1px solid #fbbf24',
+                    backgroundColor: 'rgba(245, 169, 184, 0.2)',
+                    color: '#F5A9B8',
+                    border: '1px solid #F5A9B8',
                     borderRadius: '50%',
                     width: '32px',
                     height: '32px',
@@ -1134,11 +1134,11 @@ Be sure to click your own link. Either of you can return to this message to resu
                     transition: 'all 0.2s ease'
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = 'rgba(251, 191, 36, 0.3)';
+                    e.currentTarget.style.backgroundColor = 'rgba(245, 169, 184, 0.3)';
                     e.currentTarget.style.transform = 'scale(1.1)';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = 'rgba(251, 191, 36, 0.2)';
+                    e.currentTarget.style.backgroundColor = 'rgba(245, 169, 184, 0.2)';
                     e.currentTarget.style.transform = 'scale(1)';
                   }}
                   title="Dismiss notification"
@@ -1160,7 +1160,7 @@ Be sure to click your own link. Either of you can return to this message to resu
               fontWeight: 'bold', 
               marginBottom: '1rem', 
               textAlign: 'center',
-              color: '#fbbf24',
+              color: '#F5A9B8',
               fontFamily: '"Georgia", "Times New Roman", serif'
             }}>
               Game Setup
@@ -1195,7 +1195,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                     fontSize: '1.125rem',
                     border: 'none',
                     cursor: 'pointer',
-                    backgroundColor: gameMode === 'local' ? '#fbbf24' : '#6b7280',
+                    backgroundColor: gameMode === 'local' ? '#F5A9B8' : '#6b7280',
                     color: gameMode === 'local' ? '#1f2937' : 'white',
                     boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
                     fontFamily: '"Georgia", "Times New Roman", serif'
@@ -1212,7 +1212,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                     fontSize: '1.125rem',
                     border: 'none',
                     cursor: 'pointer',
-                    backgroundColor: gameMode === 'remote' ? '#fbbf24' : '#6b7280',
+                    backgroundColor: gameMode === 'remote' ? '#F5A9B8' : '#6b7280',
                     color: gameMode === 'remote' ? '#1f2937' : 'white',
                     boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
                     fontFamily: '"Georgia", "Times New Roman", serif'
@@ -1257,7 +1257,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                         fontSize: '1.125rem',
                         border: 'none',
                         cursor: 'pointer',
-                        backgroundColor: playerCount === count ? '#fbbf24' : '#6b7280',
+                        backgroundColor: playerCount === count ? '#F5A9B8' : '#6b7280',
                         color: playerCount === count ? '#1f2937' : 'white',
                         boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
                         fontFamily: '"Georgia", "Times New Roman", serif'
@@ -1342,7 +1342,7 @@ Be sure to click your own link. Either of you can return to this message to resu
               <button
                 onClick={startGame}
                 style={{ 
-                  backgroundColor: '#fbbf24',
+                  backgroundColor: '#F5A9B8',
                   padding: '0.5rem 1rem',
                   borderRadius: '0.5rem',
                   fontWeight: '600',
@@ -1375,7 +1375,7 @@ Be sure to click your own link. Either of you can return to this message to resu
     return (
       <div style={{ 
         minHeight: '100vh', 
-        background: 'linear-gradient(to bottom, #15803d, #14532d)', 
+        background: 'linear-gradient(to bottom, #5BCEFA, #F5A9B8)', 
         color: 'white', 
         padding: '1rem 1rem 2rem 1rem',
         fontFamily: '"Georgia", "Times New Roman", serif'
@@ -1386,7 +1386,7 @@ Be sure to click your own link. Either of you can return to this message to resu
             fontWeight: 'bold', 
             textAlign: 'center', 
             marginBottom: '1.5rem', 
-            color: '#fbbf24',
+            color: '#F5A9B8',
             textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
             fontFamily: '"Georgia", "Times New Roman", serif'
           }}>
@@ -1405,7 +1405,7 @@ Be sure to click your own link. Either of you can return to this message to resu
               fontWeight: 'bold', 
               marginBottom: '1rem', 
               textAlign: 'center',
-              color: '#fbbf24',
+              color: '#F5A9B8',
               fontFamily: '"Georgia", "Times New Roman", serif'
             }}>
               🎉 {winner?.name || 'Game Complete'} 🎉
@@ -1428,9 +1428,9 @@ Be sure to click your own link. Either of you can return to this message to resu
                     justifyContent: 'space-between', 
                     alignItems: 'center',
                     padding: '1rem',
-                    backgroundColor: index === 0 ? 'rgba(251, 191, 36, 0.2)' : 'rgba(255,255,255,0.05)',
+                    backgroundColor: index === 0 ? 'rgba(245, 169, 184, 0.2)' : 'rgba(255,255,255,0.05)',
                     borderRadius: '0.5rem',
-                    border: index === 0 ? '2px solid #fbbf24' : '1px solid rgba(255,255,255,0.1)'
+                    border: index === 0 ? '2px solid #F5A9B8' : '1px solid rgba(255,255,255,0.1)'
                   }}>
                     <span style={{ 
                       fontWeight: '600',
@@ -1442,7 +1442,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                     <span style={{ 
                       fontWeight: 'bold',
                       fontSize: '1.25rem',
-                      color: index === 0 ? '#fbbf24' : 'white',
+                      color: index === 0 ? '#F5A9B8' : 'white',
                       fontFamily: '"Georgia", "Times New Roman", serif'
                     }}>
                       {getTotalScore(player)} points
@@ -1455,16 +1455,16 @@ Be sure to click your own link. Either of you can return to this message to resu
             {/* Game History */}
             {gameEngine.getGameHistory().length > 0 && (
               <div style={{ 
-                backgroundColor: 'rgba(251, 191, 36, 0.1)', 
+                backgroundColor: 'rgba(245, 169, 184, 0.1)', 
                 padding: '1.5rem', 
                 borderRadius: '0.5rem', 
                 marginBottom: '2rem',
-                border: '1px solid rgba(251, 191, 36, 0.3)'
+                border: '1px solid rgba(245, 169, 184, 0.3)'
               }}>
                 <h3 style={{ 
                   fontSize: '1.25rem', 
                   fontWeight: 'bold', 
-                  color: '#fbbf24', 
+                  color: '#F5A9B8', 
                   marginBottom: '1rem',
                   textAlign: 'center',
                   fontFamily: '"Georgia", "Times New Roman", serif'
@@ -1497,16 +1497,16 @@ Be sure to click your own link. Either of you can return to this message to resu
                <div style={{
                  marginTop: '1.5rem',
                  padding: '1.5rem',
-                 backgroundColor: 'rgba(251, 191, 36, 0.1)',
+                 backgroundColor: 'rgba(245, 169, 184, 0.1)',
                  borderRadius: '0.75rem',
                  marginBottom: '2rem',
-                 border: '1px solid rgba(251, 191, 36, 0.3)'
+                 border: '1px solid rgba(245, 169, 184, 0.3)'
                }}>
                  <h3 style={{
                    fontSize: '1.25rem',
                    fontWeight: 'bold',
                    marginBottom: '1rem',
-                   color: '#fbbf24',
+                   color: '#F5A9B8',
                    textAlign: 'center',
                    fontFamily: '"Georgia", "Times New Roman", serif'
                  }}>
@@ -1534,9 +1534,9 @@ Be sure to click your own link. Either of you can return to this message to resu
                 width: '100%',
                 marginBottom: '1rem',
                 padding: '1rem',
-                backgroundColor: 'rgba(251, 191, 36, 0.1)',
+                backgroundColor: 'rgba(245, 169, 184, 0.1)',
                 borderRadius: '0.5rem',
-                border: '1px solid rgba(251, 191, 36, 0.3)',
+                border: '1px solid rgba(245, 169, 184, 0.3)',
                 display: 'flex',
                 justifyContent: 'space-between',
                 alignItems: 'center',
@@ -1546,7 +1546,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                 <div style={{
                   flex: 1,
                   fontSize: '1rem',
-                  color: '#fbbf24',
+                  color: '#F5A9B8',
                   fontWeight: '600',
                   fontFamily: '"Georgia", "Times New Roman", serif'
                 }}>
@@ -1558,9 +1558,9 @@ Be sure to click your own link. Either of you can return to this message to resu
                 <button
                   onClick={() => setPreviousGameResult(null)}
                   style={{
-                    backgroundColor: 'rgba(251, 191, 36, 0.2)',
-                    color: '#fbbf24',
-                    border: '1px solid #fbbf24',
+                    backgroundColor: 'rgba(245, 169, 184, 0.2)',
+                    color: '#F5A9B8',
+                    border: '1px solid #F5A9B8',
                     borderRadius: '50%',
                     width: '32px',
                     height: '32px',
@@ -1573,10 +1573,10 @@ Be sure to click your own link. Either of you can return to this message to resu
                     flexShrink: 0
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = 'rgba(251, 191, 36, 0.3)';
+                    e.currentTarget.style.backgroundColor = 'rgba(245, 169, 184, 0.3)';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = 'rgba(251, 191, 36, 0.2)';
+                    e.currentTarget.style.backgroundColor = 'rgba(245, 169, 184, 0.2)';
                   }}
                 >
                   ×
@@ -1587,7 +1587,7 @@ Be sure to click your own link. Either of you can return to this message to resu
               <button
                 onClick={handlePlayAgain}
                 style={{ 
-                  backgroundColor: '#fbbf24',
+                  backgroundColor: '#F5A9B8',
                   padding: '1rem 2rem',
                   borderRadius: '0.5rem',
                   fontWeight: '600',
@@ -1633,7 +1633,7 @@ Be sure to click your own link. Either of you can return to this message to resu
   return (
     <div style={{ 
       minHeight: '100vh', 
-      background: 'linear-gradient(to bottom, #15803d, #14532d)', 
+      background: 'linear-gradient(to bottom, #5BCEFA, #F5A9B8)', 
       color: 'white', 
       padding: '0 0 2rem 0',
       fontFamily: '"Georgia", "Times New Roman", serif'
@@ -1648,7 +1648,7 @@ Be sure to click your own link. Either of you can return to this message to resu
           fontWeight: 'bold', 
           textAlign: 'center', 
           marginBottom: '1rem', 
-          color: '#fbbf24',
+          color: '#F5A9B8',
           textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
           fontFamily: '"Georgia", "Times New Roman", serif'
         }}>
@@ -1661,22 +1661,22 @@ Be sure to click your own link. Either of you can return to this message to resu
             width: '100%',
             marginBottom: '2rem',
             padding: '1.25rem',
-            backgroundColor: 'rgba(251, 191, 36, 0.15)',
+            backgroundColor: 'rgba(245, 169, 184, 0.15)',
             borderRadius: '0.75rem',
-            border: '2px solid rgba(251, 191, 36, 0.4)',
+            border: '2px solid rgba(245, 169, 184, 0.4)',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
             flexWrap: 'wrap',
             gap: '0.75rem',
-            boxShadow: '0 4px 12px rgba(251, 191, 36, 0.2)',
+            boxShadow: '0 4px 12px rgba(245, 169, 184, 0.2)',
             animation: 'fadeIn 0.5s ease-in-out',
             position: 'relative'
           }}>
             <div style={{
               flex: 1,
               fontSize: '1rem',
-              color: '#fbbf24',
+              color: '#F5A9B8',
               fontWeight: '600',
               fontFamily: '"Georgia", "Times New Roman", serif',
               lineHeight: '1.4',
@@ -1685,7 +1685,7 @@ Be sure to click your own link. Either of you can return to this message to resu
               gap: '0.5rem'
             }}>
               <span style={{
-                backgroundColor: 'rgba(251, 191, 36, 0.3)',
+                backgroundColor: 'rgba(245, 169, 184, 0.3)',
                 color: '#92400e',
                 padding: '0.25rem 0.5rem',
                 borderRadius: '0.25rem',
@@ -1700,9 +1700,9 @@ Be sure to click your own link. Either of you can return to this message to resu
             <button
               onClick={() => setPreviousGameResult(null)}
               style={{
-                backgroundColor: 'rgba(251, 191, 36, 0.2)',
-                color: '#fbbf24',
-                border: '1px solid #fbbf24',
+                backgroundColor: 'rgba(245, 169, 184, 0.2)',
+                color: '#F5A9B8',
+                border: '1px solid #F5A9B8',
                 borderRadius: '50%',
                 width: '32px',
                 height: '32px',
@@ -1716,11 +1716,11 @@ Be sure to click your own link. Either of you can return to this message to resu
                 transition: 'all 0.2s ease'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = 'rgba(251, 191, 36, 0.3)';
+                e.currentTarget.style.backgroundColor = 'rgba(245, 169, 184, 0.3)';
                 e.currentTarget.style.transform = 'scale(1.1)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = 'rgba(251, 191, 36, 0.2)';
+                e.currentTarget.style.backgroundColor = 'rgba(245, 169, 184, 0.2)';
                 e.currentTarget.style.transform = 'scale(1)';
               }}
               title="Dismiss notification"
@@ -1782,11 +1782,11 @@ Be sure to click your own link. Either of you can return to this message to resu
               <div style={{ 
                 fontSize: '1.125rem', 
                 fontWeight: 'bold', 
-                color: '#fbbf24',
-                backgroundColor: 'rgba(251, 191, 36, 0.2)',
+                color: '#F5A9B8',
+                backgroundColor: 'rgba(245, 169, 184, 0.2)',
                 padding: '0.25rem 0.75rem',
                 borderRadius: '0.5rem',
-                border: '2px solid #fbbf24'
+                border: '2px solid #F5A9B8'
               }}>
                 🎯 {currentPlayer.name}
               </div>
@@ -1797,7 +1797,7 @@ Be sure to click your own link. Either of you can return to this message to resu
               marginBottom: '0.75rem',
               fontSize: '1rem', 
               fontWeight: '600',
-              color: '#fbbf24'
+              color: '#F5A9B8'
             }}>
               Rolls remaining: {gameState.rollsLeft}
             </div>
@@ -1830,7 +1830,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                   style={{
                     width: '2.8rem',
                     height: '2.8rem',
-                    backgroundColor: die.isHeld ? '#fef3c7' : 'white',
+                    backgroundColor: die.isHeld ? '#E0F2FE' : 'white',
                     borderRadius: '0.5rem',
                     display: 'flex',
                     alignItems: 'center',
@@ -1850,7 +1850,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                       
                       return (isRolling || gameState.rollsLeft === 3 || gameState.rollsLeft === 0 || !isCurrentUserTurn) ? 'not-allowed' : 'pointer';
                     })(),
-                    border: die.isHeld ? '4px solid #f59e0b' : '2px solid #d1d5db',
+                    border: die.isHeld ? '4px solid #F5A9B8' : '2px solid #d1d5db',
                     boxShadow: die.isHeld 
                       ? '0 8px 16px rgba(245, 158, 11, 0.4), inset 0 2px 4px rgba(255,255,255,0.8)' 
                       : '0 4px 6px rgba(0,0,0,0.1)',
@@ -1887,7 +1887,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                       position: 'absolute',
                       top: '-0.5rem',
                       right: '-0.5rem',
-                      backgroundColor: '#f59e0b',
+                      backgroundColor: '#F5A9B8',
                       color: 'white',
                       borderRadius: '50%',
                       width: '1.5rem',
@@ -1925,14 +1925,14 @@ Be sure to click your own link. Either of you can return to this message to resu
                   <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
                     <div style={{ 
                       padding: '1rem',
-                      backgroundColor: 'rgba(251, 191, 36, 0.1)',
+                      backgroundColor: 'rgba(245, 169, 184, 0.1)',
                       borderRadius: '0.5rem',
-                      border: '1px solid rgba(251, 191, 36, 0.3)',
+                      border: '1px solid rgba(245, 169, 184, 0.3)',
                       marginBottom: '1rem'
                     }}>
                       <p style={{ 
                         fontSize: '1.1rem', 
-                        color: '#fbbf24', 
+                        color: '#F5A9B8', 
                         fontWeight: '600',
                         margin: 0,
                         fontFamily: '"Georgia", "Times New Roman", serif'
@@ -1952,7 +1952,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                       onClick={rollDice}
                       disabled={gameState.rollsLeft === 0 || isRolling}
                       style={{ 
-                        backgroundColor: (gameState.rollsLeft === 0 || isRolling) ? '#6b7280' : '#fbbf24',
+                        backgroundColor: (gameState.rollsLeft === 0 || isRolling) ? '#6b7280' : '#F5A9B8',
                         padding: '0.5rem 1rem',
                         borderRadius: '0.5rem',
                         fontWeight: '600',
@@ -2001,7 +2001,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                    {forceYahtzee && (
                      <p style={{ 
                        fontSize: '0.75rem', 
-                       color: '#fbbf24', 
+                       color: '#F5A9B8', 
                        marginTop: '0.5rem',
                        fontStyle: 'italic',
                        fontFamily: '"Georgia", "Times New Roman", serif'
@@ -2030,7 +2030,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                    </button>
                    <p style={{ 
                      fontSize: '0.75rem', 
-                     color: '#fbbf24', 
+                     color: '#F5A9B8', 
                      marginTop: '0.5rem',
                      fontStyle: 'italic',
                      fontFamily: '"Georgia", "Times New Roman", serif'
@@ -2087,12 +2087,12 @@ Be sure to click your own link. Either of you can return to this message to resu
               
               return (
                               <div key={displayPlayer.id} style={{ 
-                  backgroundColor: '#fef3c7', 
+                  backgroundColor: '#E0F2FE', 
                   color: '#1f2937', 
                   padding: '1.25rem', 
                   borderRadius: '0.75rem', 
                   boxShadow: '0 25px 50px rgba(0,0,0,0.5)',
-                  border: isActivePlayer ? '4px solid #fbbf24' : '4px solid #f59e0b',
+                  border: isActivePlayer ? '4px solid #F5A9B8' : '4px solid #F5A9B8',
                   fontFamily: '"Georgia", "Times New Roman", serif'
                 }}>
                   <div style={{ 
@@ -2101,7 +2101,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                     alignItems: 'center', 
                     marginBottom: '0.75rem',
                     paddingBottom: '0.5rem',
-                    borderBottom: '2px solid #f59e0b'
+                    borderBottom: '2px solid #F5A9B8'
                   }}>
                     <h3 style={{ 
                       fontSize: 'clamp(1.25rem, 3vw, 1.5rem)', 
@@ -2153,7 +2153,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                              <span style={{ 
                                fontSize: '0.75rem', 
                                color: '#d97706', 
-                               backgroundColor: '#fef3c7', 
+                               backgroundColor: '#E0F2FE', 
                                padding: '0.125rem 0.25rem', 
                                borderRadius: '0.125rem',
                                fontFamily: '"Georgia", "Times New Roman", serif'
@@ -2227,7 +2227,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                                   
                                   // Priority 1: Upper Section if available
                                   if (isCategoryAvailable(displayPlayer, upperCategory)) {
-                                    return category === upperCategory ? '#fbbf24' : '#d97706';
+                                    return category === upperCategory ? '#F5A9B8' : '#d97706';
                                   }
                                   
                                   // Priority 2: Lower Section categories only if Upper Section is filled
@@ -2240,14 +2240,14 @@ Be sure to click your own link. Either of you can return to this message to resu
                                     const isValidJokerCategory = ((category as ScoringCategory) === 'threeOfAKind' && threeOfAKindAvailable) || 
                                                                  ((category as ScoringCategory) === 'fourOfAKind' && fourOfAKindAvailable);
                                     if (isValidJokerCategory) {
-                                      return '#fbbf24';
+                                      return '#F5A9B8';
                                     }
                                   } else {
                                     // If neither 3-of-a-Kind nor 4-of-a-Kind is available, then highlight other Lower Section categories
                                     const validJokerCategories: ScoringCategory[] = ['fullHouse', 'smallStraight', 'largeStraight', 'chance'];
                                     const isValidJokerCategory = validJokerCategories.includes(category as ScoringCategory) && isCategoryAvailable(displayPlayer, category);
                                     if (isValidJokerCategory) {
-                                      return '#fbbf24';
+                                      return '#F5A9B8';
                                     }
                                     
                                     // If no Lower Section categories are available, highlight Upper Section categories (except the dice value category)
@@ -2256,7 +2256,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                                                                 isCategoryAvailable(player, category) && 
                                                                 category !== upperCategory;
                                     if (isValidUpperCategory) {
-                                      return '#fbbf24';
+                                      return '#F5A9B8';
                                     }
                                   }
                                 }
@@ -2273,7 +2273,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                       </div>
                     ))}
                     <div style={{ 
-                      borderTop: '1px solid #f59e0b', 
+                      borderTop: '1px solid #F5A9B8', 
                       marginTop: '0.5rem', 
                       paddingTop: '0.5rem',
                       fontSize: '0.875rem',
@@ -2325,7 +2325,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                              <span style={{ 
                                fontSize: '0.75rem', 
                                color: '#d97706', 
-                               backgroundColor: '#fef3c7', 
+                               backgroundColor: '#E0F2FE', 
                                padding: '0.125rem 0.25rem', 
                                borderRadius: '0.125rem',
                                fontFamily: '"Georgia", "Times New Roman", serif'
@@ -2412,14 +2412,14 @@ Be sure to click your own link. Either of you can return to this message to resu
                                     const isValidJokerCategory = (key === 'threeOfAKind' && threeOfAKindAvailable) || 
                                                                  (key === 'fourOfAKind' && fourOfAKindAvailable);
                                     if (isValidJokerCategory) {
-                                      return '#fbbf24';
+                                      return '#F5A9B8';
                                     }
                                   } else {
                                     // If neither 3-of-a-Kind nor 4-of-a-Kind is available, then highlight other Lower Section categories
                                     const validJokerCategories = ['fullHouse', 'smallStraight', 'largeStraight', 'chance'];
                                     const isValidJokerCategory = validJokerCategories.includes(key) && isCategoryAvailable(displayPlayer, key);
                                     if (isValidJokerCategory) {
-                                      return '#fbbf24';
+                                      return '#F5A9B8';
                                     }
                                     
                                     // If no Lower Section categories are available, highlight Upper Section categories (except the dice value category)
@@ -2428,7 +2428,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                                                                 isCategoryAvailable(player, key) && 
                                                                 key !== upperCategory;
                                     if (isValidUpperCategory) {
-                                      return '#fbbf24';
+                                      return '#F5A9B8';
                                     }
                                   }
                                 }
@@ -2445,7 +2445,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                       </div>
                     ))}
                                          <div style={{ 
-                       borderTop: '1px solid #f59e0b', 
+                       borderTop: '1px solid #F5A9B8', 
                        marginTop: '0.5rem', 
                        paddingTop: '0.5rem',
                        fontSize: '0.875rem',
@@ -2457,7 +2457,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                         <span>{getLowerTotal(displayPlayer)}</span>
                       </div>
                       {(displayPlayer.scoreCard.yahtzeeBonus || 0) > 0 && (
-                        <div style={{ display: 'flex', justifyContent: 'space-between', color: '#fbbf24' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', color: '#F5A9B8' }}>
                           <span>Yahtzee Bonus</span>
                           <span>+{displayPlayer.scoreCard.yahtzeeBonus}</span>
                         </div>
@@ -2471,9 +2471,9 @@ Be sure to click your own link. Either of you can return to this message to resu
                        gridColumn: '1 / -1',
                        marginTop: '1rem',
                        padding: '0.75rem',
-                       backgroundColor: '#fef3c7',
+                       backgroundColor: '#E0F2FE',
                        borderRadius: '0.5rem',
-                       border: '2px solid #f59e0b',
+                       border: '2px solid #F5A9B8',
                        wordWrap: 'break-word'
                      }}>
                        <div style={{ 
@@ -2496,7 +2496,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                            {(displayPlayer.scoreCard.yahtzee ?? 0) > 0 && (
                              <span style={{ 
                                fontSize: '0.75rem', 
-                               color: '#fbbf24', 
+                               color: '#F5A9B8', 
                                backgroundColor: '#ecfdf5', 
                                padding: '0.125rem 0.25rem', 
                                borderRadius: '0.125rem',
