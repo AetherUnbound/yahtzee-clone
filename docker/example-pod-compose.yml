@@ -18,5 +18,5 @@ services:
     ports:
       - "3000:80"
     environment:
-      - VITE_API_URL=http://backend:3001
+      - VITE_API_URL=
     restart: unless-stopped
