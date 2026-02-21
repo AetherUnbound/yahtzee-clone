@@ -272,7 +272,7 @@ Be sure to click your own link. Either of you can return to this message to resu
           if (clipboardOk) {
             addNotification('success', `The invite contains one link for your friend and one for you (in case you leave and want to return later).`, 0, 'Invite copied to clipboard');
           } else {
-            prompt('Copy this invite text and send it to your friend:', inviteText);
+            prompt("Copy your friend's link and send it to them:", friendLink);
           }
         };
 
