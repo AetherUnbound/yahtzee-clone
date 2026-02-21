@@ -261,26 +261,27 @@ ${creatorName}'s link is: ${creatorLink}
 
 Be sure to click your own link. Either of you can return to this message to resume your game at any time.`;
 
-                // Copy to clipboard and show to user
-        navigator.clipboard.writeText(inviteText).then(() => {
-          // Navigate to the creator's personal URL to show the waiting screen
+                // Navigate to the creator's game regardless of clipboard success
+        const proceedAsCreator = (clipboardOk: boolean) => {
           const creatorGameId = `${baseGameId}_creator`;
           const creatorUrl = `${window.location.origin}?game=${creatorGameId}`;
-          
-          // Update the URL without reloading the page
           window.history.pushState({}, '', creatorUrl);
-          
-          // Set the remote game state to trigger the waiting screen
           setRemoteGameId(baseGameId);
           setRemotePlayerType('creator');
           setIsJoiningRemoteGame(true);
-          
-          addNotification('success', `The invite contains one link for your friend and one for you (in case you leave and want to return later).`, 0, 'Invite copied to clipboard');
-        }).catch(() => {
-          // Fallback if clipboard API fails
-          addNotification('error', 'Clipboard access failed. Please copy the invite text manually.');
-          prompt('Copy this invite text and send it to your friend:', inviteText);
-        });
+          if (clipboardOk) {
+            addNotification('success', `The invite contains one link for your friend and one for you (in case you leave and want to return later).`, 0, 'Invite copied to clipboard');
+          } else {
+            prompt('Copy this invite text and send it to your friend:', inviteText);
+          }
+        };
+
+        // Copy to clipboard — only available in secure contexts (HTTPS/localhost)
+        if (navigator.clipboard?.writeText) {
+          navigator.clipboard.writeText(inviteText).then(() => proceedAsCreator(true)).catch(() => proceedAsCreator(false));
+        } else {
+          proceedAsCreator(false);
+        }
       } catch (error) {
         const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
         addNotification('error', `Failed to create remote game: ${errorMessage}`);
