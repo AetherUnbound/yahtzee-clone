@@ -17,6 +17,12 @@ export class DatabaseManager {
     const schema = this.readSchemaFile();
     this.db.exec(schema);
     
+    // Migrate: add is_tie column if missing (for existing databases)
+    const columns = this.db.pragma('table_info(game_history)');
+    if (columns.length > 0 && !columns.find(c => c.name === 'is_tie')) {
+      this.db.exec('ALTER TABLE game_history ADD COLUMN is_tie BOOLEAN DEFAULT FALSE');
+    }
+    
     // Enable foreign keys
     this.db.pragma('foreign_keys = ON');
   }
@@ -73,7 +79,8 @@ export class DatabaseManager {
           completed_at DATETIME DEFAULT CURRENT_TIMESTAMP,
           winner_name TEXT NOT NULL,
           winner_score INTEGER NOT NULL,
-          total_players INTEGER NOT NULL
+          total_players INTEGER NOT NULL,
+          is_tie BOOLEAN DEFAULT FALSE
       );
 
       -- Player scores in history

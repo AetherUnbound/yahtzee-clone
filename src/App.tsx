@@ -1523,7 +1523,7 @@ Be sure to click your own link. Either of you can return to this message to resu
                        borderRadius: '0.25rem',
                        fontFamily: '"Georgia", "Times New Roman", serif'
                      }}>
-                                               <strong>GAME {result.gameNumber}:</strong> {result.winner} (${result.winnerScore}) beat ${result.players.filter(p => p.name !== result.winner).map(p => `${p.name} (${p.score})`).join(' and ')}
+                                               <strong>GAME {result.gameNumber}:</strong> {result.winner} ({result.winnerScore}) beat {result.players.filter(p => p.name !== result.winner).map(p => `${p.name} (${p.score})`).join(' and ')}
                      </div>
                    ))}
                  </div>
