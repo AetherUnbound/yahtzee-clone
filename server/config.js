@@ -18,6 +18,7 @@ const config = {
   
   // Game settings
   maxPlayers: parseInt(process.env.MAX_PLAYERS) || 6,
+  gameCleanupEnabled: process.env.GAME_CLEANUP_ENABLED !== 'false',
   gameCleanupInterval: parseInt(process.env.GAME_CLEANUP_INTERVAL) || 86400000, // 24 hours
   gameRetentionDays: parseInt(process.env.GAME_RETENTION_DAYS) || 7,
   

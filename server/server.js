@@ -419,10 +419,10 @@ app.get('/api/games/:gameId/history', (req, res) => {
   }
 });
 
-// Clean up old games (5-day inactivity)
+// Clean up old games
 app.delete('/api/games/cleanup', (req, res) => {
   try {
-    const deletedCount = dbManager.cleanupOldGames();
+    const deletedCount = dbManager.cleanupOldGames(config.gameRetentionDays);
     res.json({ 
       success: true, 
       deletedCount,
@@ -465,24 +465,28 @@ app.delete('/api/games/clear-all', (req, res) => {
 //   originalConsoleLog(...args);
 // };
 
-// Set up daily cleanup (runs every 24 hours)
+// Set up periodic cleanup
 const setupDailyCleanup = () => {
+  if (!config.gameCleanupEnabled) {
+    console.log('🗓️ Game cleanup is disabled');
+    return;
+  }
+
   const cleanup = () => {
     try {
-      const deletedCount = dbManager.cleanupOldGames();
-      console.log(`🧹 Daily cleanup completed: ${deletedCount} old games removed`);
+      const deletedCount = dbManager.cleanupOldGames(config.gameRetentionDays);
+      console.log(`🧹 Cleanup completed: ${deletedCount} old games removed`);
     } catch (error) {
-      console.error('Error during daily cleanup:', error);
+      console.error('Error during cleanup:', error);
     }
   };
 
-  // Run cleanup every 24 hours (24 * 60 * 60 * 1000 milliseconds)
-  setInterval(cleanup, 24 * 60 * 60 * 1000);
+  setInterval(cleanup, config.gameCleanupInterval);
   
   // Run initial cleanup after 1 hour to avoid running immediately on startup
   setTimeout(cleanup, 60 * 60 * 1000);
   
-  console.log('🗓️ Daily cleanup scheduled (runs every 24 hours)');
+  console.log(`🗓️ Game cleanup scheduled (every ${config.gameCleanupInterval / 3600000}h, retain ${config.gameRetentionDays} days)`);
 };
 
 // Start server

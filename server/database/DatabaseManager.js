@@ -340,13 +340,13 @@ export class DatabaseManager {
   }
 
   /**
-   * Clean up old games (7-day inactivity)
+   * Clean up old games based on retention period
    */
-  cleanupOldGames() {
+  cleanupOldGames(retentionDays = 7) {
     const result = this.db.prepare(`
       DELETE FROM games 
-      WHERE last_activity < datetime('now', '-7 days')
-    `).run();
+      WHERE last_activity < datetime('now', '-' || ? || ' days')
+    `).run(retentionDays);
     
     return result.changes;
   }
